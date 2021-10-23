@@ -123,12 +123,9 @@ Afterwards, you can test that `kubectl` works by running a command like `kubectl
 
 ### Verifying it Works
 Once the project is up and running, you should be able to see 3 deployments and 3 services in Kubernetes:
-`kubectl get pods` and `kubectl get services` - should both return `udaconnect-app`, `udaconnect-api`, and `postgres`
+`kubectl get pods` and `kubectl get services` - should both return 
 
 
-These pages should also load on your web browser:
-* `http://localhost:30001/` - OpenAPI Documentation
-* `http://localhost:30001/api/` - Base path for API
 * `http://localhost:30000/` - Frontend ReactJS Application
 
 ### Docker Images
