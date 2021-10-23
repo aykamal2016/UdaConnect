@@ -138,9 +138,9 @@ All docker images are hosted in dockerhub from aykamal/. Under each module there
 ![Architecture Diagram](https://github.com/aykamal2016/nd064-c2-message-passing-projects-starter/blob/master/docs/architecture_design.png)
 
 ### Project Directories 
-    • daconnect/db - Database
-    • udaconnect/deployment - All deployment yaml files
-    • udaconnect/docs - All screenshots, required text files for design decisions and yaml files for manually written OpenAPI spec
-    • udaconnect/modules - individual microservices that were deployed to kubernetes.
-    • udaconnect/scripts - Useful scripts to fill the database with dummy data.
+    • UdaConnect/db - Database
+    • UdaConnect/deployment - All deployment yaml files
+    • UdaConnect/docs - All screenshots, required text files for design decisions and yaml files for manually written OpenAPI spec
+    • UdaConnect/modules - individual microservices that were deployed to kubernetes.
+    • UdaConnect/scripts - Useful scripts to fill the database with dummy data.
 
