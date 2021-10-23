@@ -130,7 +130,6 @@ These pages should also load on your web browser:
 ### Docker Images
 All docker images are hosted in dockerhub from aykamal/. To make changes to the application, build your own Docker image and push it to your own DockerHub repository. Replace the existing container registry path with your own.
 
-## Architecture Diagrams
 
 ![Architecture Diagram](https://github.com/aykamal2016/nd064-c2-message-passing-projects-starter/blob/master/docs/architecture_design.png)
 
