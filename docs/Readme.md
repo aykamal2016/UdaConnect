@@ -13,4 +13,8 @@ This directory contains all the required documents for the udaconnect project
     
     • Postman collection of REST API endpoints -postman.json
     
-    • openapi yaml file for endpoints 
+    • openapi-person yaml file for person Api endpoints 
+    
+    • openapi-connection yaml file for connection Api endpoints 
+    
+    
