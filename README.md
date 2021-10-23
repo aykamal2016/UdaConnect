@@ -132,6 +132,6 @@ All docker images are hosted in dockerhub from aykamal/. To make changes to the 
 
 ## Architecture Diagrams
 
-https://github.com/aykamal2016/nd064-c2-message-passing-projects-starter/blob/master/docs/architecture_design.png
+![Architecture Diagram](https://github.com/aykamal2016/nd064-c2-message-passing-projects-starter/blob/master/docs/architecture_design.png)
 
 
