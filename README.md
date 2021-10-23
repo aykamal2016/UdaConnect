@@ -94,9 +94,11 @@ Afterwards, you can test that `kubectl` works by running a command like `kubectl
     You should see the following svc created
     kafka-headless ,kafka-zookeeper , kafka, kafka-zookeeper-headless,kafka-0-external
     Create sample topic 
-    3. kubectl exec -it kafka-0 -- kafka-topics.sh --create --topic sample --replication-factor 1 --partitions 2 --bootstrap-server localhost:9092
+    3. kubectl exec -it kafka-0 -- kafka-topics.sh --create 
+    --topic sample --replication-factor 1 --partitions 2 --bootstrap-server localhost:9092
  
-    Although all the project code will be accessing the kafka from inside kubernetes using the service "kafka-headless" , yet it is useful to have kafka exposed    outside the kubernetes cluster for ease of testing kafka setup.
+    Although all the project code will be accessing the kafka from inside kubernetes using the service "kafka-headless" 
+    , yet it is useful to have kafka exposed    outside the kubernetes cluster for ease of testing kafka setup.
     Below sample python producer code that can be run from local machine outside the k8s cluster 
     from kafka import KafkaProducer
       TOPIC_NAME = 'sample'
@@ -128,9 +130,16 @@ These pages should also load on your web browser:
 * `http://localhost:30000/` - Frontend ReactJS Application
 
 ### Docker Images
-All docker images are hosted in dockerhub from aykamal/. To make changes to the application, build your own Docker image and push it to your own DockerHub repository. Replace the existing container registry path with your own.
+All docker images are hosted in dockerhub from aykamal/. Under each module there is a deployment directory that uses github action that build the application into docker container and deploy it to dockerhub registery.
 
 
 ![Architecture Diagram](https://github.com/aykamal2016/nd064-c2-message-passing-projects-starter/blob/master/docs/architecture_design.png)
+
+### Project Directories 
+udaconnect/db - Database
+udaconnect/deployment - All deployment yaml files
+udaconnect/docs - All screenshots, required text files for design decisions and yaml files for manually written OpenAPI spec
+udaconnect/modules - individual microservices that were deployed to kubernetes.
+udaconnect/scripts - Useful scripts to fill the database with dummy data.
 
 
