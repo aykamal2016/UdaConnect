@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "d72118d7-f714-49f4-8c12-50cefe1ce731",
+		"name": "postaman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve person by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:30001/api/persons/1222",
+					"host": [
+						"localhost"
+					],
+					"port": "30001",
+					"path": [
+						"api",
+						"persons",
+						"1222"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Retrieve Person by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:30001/api/persons/1222",
+							"host": [
+								"localhost"
+							],
+							"port": "30001",
+							"path": [
+								"api",
+								"persons",
+								"1222"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.1 Python/3.7.12"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 07:50:39 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"company_name\": \"BDC\",\n    \"first_name\": \"Ayman\",\n    \"id\": 1222,\n    \"last_name\": \"Moawad\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Retrieve all connections by Person ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Retrieve all connections by Person ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30002/api/persons/8/connection?start_date=2020-01-01&end_date=2020-06-30&distance=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30002",
+							"path": [
+								"api",
+								"persons",
+								"8",
+								"connection"
+							],
+							"query": [
+								{
+									"key": "start_date",
+									"value": "2020-01-01"
+								},
+								{
+									"key": "end_date",
+									"value": "2020-06-30"
+								},
+								{
+									"key": "distance",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "473"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.1 Python/3.7.12"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 08:09:20 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"location\": {\n            \"id\": 63,\n            \"person_id\": 5,\n            \"creation_time\": \"2020-01-05T10:37:06\",\n            \"latitude\": \"35.0585136\",\n            \"longitude\": \"-106.5719521\"\n        },\n        \"person\": {\n            \"id\": 5,\n            \"first_name\": \"Taco\",\n            \"company_name\": \"Alpha Omega Upholstery\",\n            \"last_name\": \"Fargo\"\n        }\n    },\n    {\n        \"location\": {\n            \"id\": 64,\n            \"person_id\": 6,\n            \"creation_time\": \"2020-01-05T10:37:06\",\n            \"latitude\": \"35.0585136\",\n            \"longitude\": \"-106.5719521\"\n        },\n        \"person\": {\n            \"id\": 6,\n            \"first_name\": \"Frank\",\n            \"company_name\": \"USDA\",\n            \"last_name\": \"Shader\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Check Api health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Check Health",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:30001/health",
+							"host": [
+								"localhost"
+							],
+							"port": "30001",
+							"path": [
+								"health"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "10"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.1 Python/3.7.12"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 08:47:19 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "\"healthy\""
+				}
+			]
+		},
+		{
+			"name": "Retreive all persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Retreive all persons",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:30001/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30001",
+							"path": [
+								"api",
+								"persons"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "737"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.1 Python/3.7.12"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 11:21:06 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"first_name\": \"Taco\",\n        \"last_name\": \"Fargo\",\n        \"company_name\": \"Alpha Omega Upholstery\",\n        \"id\": 5\n    },\n    {\n        \"first_name\": \"Frank\",\n        \"last_name\": \"Shader\",\n        \"company_name\": \"USDA\",\n        \"id\": 6\n    },\n    {\n        \"first_name\": \"Pam\",\n        \"last_name\": \"Trexler\",\n        \"company_name\": \"Hampton, Hampton and McQuill\",\n        \"id\": 1\n    },\n    {\n        \"first_name\": \"Paul\",\n        \"last_name\": \"Badman\",\n        \"company_name\": \"Paul Badman & Associates\",\n        \"id\": 8\n    },\n    {\n        \"first_name\": \"Otto\",\n        \"last_name\": \"Spring\",\n        \"company_name\": \"The Chicken Sisters Restaurant\",\n        \"id\": 9\n    },\n    {\n        \"first_name\": \"Ayman\",\n        \"last_name\": \"Moawad\",\n        \"company_name\": \"BDC\",\n        \"id\": 1222\n    },\n    {\n        \"first_name\": \"Zeina\",\n        \"last_name\": \"Moawad\",\n        \"company_name\": \"BDC\",\n        \"id\": 1555\n    },\n    {\n        \"first_name\": \"Nour\",\n        \"last_name\": \"Moawad\",\n        \"company_name\": \"BDC\",\n        \"id\": 1666\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create Person",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "Create Person",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\":\"Aly\",\n    \"last_name\":\"Moawad\",\n    \"company_name\":\"ITSOFT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:30001/api/persons",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "30001",
+							"path": [
+								"api",
+								"persons"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1888",
+									"description": "Person ID",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/0.16.1 Python/3.7.12"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Oct 2021 11:45:31 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"first_name\": \"Aly\",\n    \"last_name\": \"Moawad\",\n    \"company_name\": \"ITSOFT\",\n    \"id\": 2\n}"
+				}
+			]
+		}
+	]
+}

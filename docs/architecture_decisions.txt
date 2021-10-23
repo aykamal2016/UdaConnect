@@ -1,0 +1,12 @@
+As Shown in the architecture diagram. I divided the monolithic application into group of Microservices.
+
+Person Microservice , this is a restful api responsible for retrieval and creation of person information from the postgres database , rest Api is used other than other methodolgy becuase this Api is expected to be used by the React frontend application interface and it is not expected to have large volume of requests for data retrieval or creation in the database
+
+Connection Microservice , this is restful api responsible for retrieval of connections for certain person id , rest api is used as it is not expected to have large volume of connections retrieved per person id  and also this Api will be called from the React frontend application
+
+Location producer Microservice this microservice retrieve person id and user coordinates (longitude and latitude). grpc is used as per project requirementsthere will be lots of users sending  their locations data concurrently ,  rest-api will not be adequate thus another message passing techinique , grpc, is recommended due to to is ability to handle calls faster than REST. The location producer microservice is a grpc server who retrieves (personId,longitutude ,latitude ) from a grpc-client and insert it to Kafka cluster. Insertion of new user locations doesnot happen synchrounasly in the postgres database , but takes place aschychronously though Kafka as this prevent failure due to large volume of locations coming from grpc-client to the grpc-server. 
+
+Location consumer Microservice this microservice consumes all messages inserted in Kafa under certain topic , and insert it in the postgres database 
+
+
+
