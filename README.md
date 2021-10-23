@@ -122,8 +122,10 @@ Afterwards, you can test that `kubectl` works by running a command like `kubectl
 9. `kubectl apply -f deployment/location-producer-api.yaml` - Set up the service and deployment for the grpc server and kafka producer 
 
 ### Verifying it Works
-Once the project is up and running, you should be able to see 3 deployments and 3 services in Kubernetes:
+Once the project is up and running, you should be able to see  deployments and  services in Kubernetes:
 `kubectl get pods` and `kubectl get services` - should both return 
+![pods](https://github.com/aykamal2016/UdaConnect/blob/master/docs/pods_screenshot.png)
+![pods](https://github.com/aykamal2016/UdaConnect/blob/master/docs/service_screenshot.png)
 
 
 * `http://localhost:30000/` - Frontend ReactJS Application
@@ -132,7 +134,7 @@ Once the project is up and running, you should be able to see 3 deployments and 
 All docker images are hosted in dockerhub from aykamal/. Under each module there is a deployment directory that uses github action that build the application into docker container and deploy it to dockerhub registery.
 
 
-![Architecture Diagram](https://github.com/aykamal2016/nd064-c2-message-passing-projects-starter/blob/master/docs/architecture_design.png)
+![Architecture Diagram](https://github.com/aykamal2016/UdaConnect/blob/master/docs/architecture_design.png)
 
 ### Project Directories 
     • UdaConnect/db - Database
