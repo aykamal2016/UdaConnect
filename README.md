@@ -81,7 +81,9 @@ Afterwards, you can test that `kubectl` works by running a command like `kubectl
 
     1. Install helm in the kubernetes cluster , then execute the below commands 
     2. helm repo add bitnami https://charts.bitnami.com/bitnami
-    3. helm template kafka bitnami/kafka --set  zookeeper.volumePermissions.enabled=true,externalAccess.enabled=true,externalAccess.service.type=NodePort,externalAccess.service.nodePorts={'30005'},externalAccess.service.domain="localhost" > kafka.yaml
+    3. helm template kafka bitnami/kafka --set  zookeeper.volumePermissions.enabled=true,externalAccess.enabled=true,
+    externalAccess.service.type=NodePort,externalAccess.service.nodePorts={'30005'},
+    externalAccess.service.domain="localhost" > kafka.yaml
     4.  kubectl apply -f kafka.yaml 
       
  ### Verifying it works 
@@ -136,10 +138,9 @@ All docker images are hosted in dockerhub from aykamal/. Under each module there
 ![Architecture Diagram](https://github.com/aykamal2016/nd064-c2-message-passing-projects-starter/blob/master/docs/architecture_design.png)
 
 ### Project Directories 
-udaconnect/db - Database
-udaconnect/deployment - All deployment yaml files
-udaconnect/docs - All screenshots, required text files for design decisions and yaml files for manually written OpenAPI spec
-udaconnect/modules - individual microservices that were deployed to kubernetes.
-udaconnect/scripts - Useful scripts to fill the database with dummy data.
-
+    • daconnect/db - Database
+    • udaconnect/deployment - All deployment yaml files
+    • udaconnect/docs - All screenshots, required text files for design decisions and yaml files for manually written OpenAPI spec
+    • udaconnect/modules - individual microservices that were deployed to kubernetes.
+    • udaconnect/scripts - Useful scripts to fill the database with dummy data.
 
