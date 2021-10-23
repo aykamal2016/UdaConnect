@@ -131,8 +131,7 @@ These pages should also load on your web browser:
 All docker images are hosted in dockerhub from aykamal/. To make changes to the application, build your own Docker image and push it to your own DockerHub repository. Replace the existing container registry path with your own.
 
 ## Architecture Diagrams
-Your architecture diagram should focus on the services and how they talk to one another. For our project, we want the diagram in a `.png` format. Some popular free software and tools to create architecture diagrams:
-1. [Lucidchart](https://www.lucidchart.com/pages/)
-2. [Google Docs](docs.google.com) Drawings (In a Google Doc, _Insert_ - _Drawing_ - _+ New_)
-3. [Diagrams.net](https://app.diagrams.net/)
+
+https://github.com/aykamal2016/nd064-c2-message-passing-projects-starter/blob/master/docs/architecture_design.png
+
 
